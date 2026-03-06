@@ -35,11 +35,18 @@
     </nav>
 
 
-    <div class="card m-4">
-        <div class="card-header">Basic Web Page with Bootstrap</div>
-        <div class="card-body">Lorem ipsum dolor ...</div>
+  @php($j = 5)
+  <div class="card m-4 col-sm-2">	
+    <div class="card-header">{{$j}} Multiplication Table</div>
+    <div class="card-body">
+      <table>
+        @foreach (range(1, 10) as $i)
+        <tr><td>{{$i}} * {{$j}}</td><td> = {{ $i * $j }}</td></li>    
+        @endforeach
+      </table>
     </div>
+  </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat consequat enim, at tincidunt lacus malesuada eget. Fusce nec magna lectus. Donec sit amet consequat est. Aliquam quis augue pharetra, ornare ligula sed, dignissim turpis. Interdum et malesuada fames ac ante ipsum ortor.</p>
+
 </body>
 </html>

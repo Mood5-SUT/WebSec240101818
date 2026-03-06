@@ -35,11 +35,18 @@
     </nav>
 
 
-    <div class="card m-4">
-        <div class="card-header">Basic Web Page with Bootstrap</div>
-        <div class="card-body">Lorem ipsum dolor ...</div>
+    <div class="card">
+        <div class="card-header">Even Numbers</div>
+        <div class="card-body">
+            @foreach (range(1, 100) as $i)
+            @if($i%2==0)
+                <span class="badge bg-primary">{{$i}}</span>  
+            @else
+                <span class="badge bg-secondary">{{$i}}</span>  
+            @endif
+            @endforeach
+        </div>
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat consequat enim, at tincidunt lacus malesuada eget. Fusce nec magna lectus. Donec sit amet consequat est. Aliquam quis augue pharetra, ornare ligula sed, dignissim turpis. Interdum et malesuada fames ac ante ipsum ortor.</p>
 </body>
 </html>
