@@ -1,0 +1,53 @@
+create models:
+php artisan make:model Book
+php artisan make:model Borrowing
+
+
+create controllers:
+php artisan make:controller Web/AuthController
+php artisan make:controller Web/DashboardController
+php artisan make:controller Web/UsersController
+php artisan make:controller Web/BooksController
+php artisan make:controller Web/BorrowingsController
+php artisan make:controller Web/RolesPermissionsController
+
+
+make migration table:
+php artisan make:migration add_borrowing_fields_to_users_table
+
+
+create view folders:
+mkdir resources/views/layouts
+mkdir resources/views/auth
+mkdir resources/views/books
+mkdir resources/views/users
+mkdir resources/views/profile
+mkdir resources/views/borrowings
+mkdir resources/views/roles-permissions
+
+
+
+Create view files:
+touch resources/views/layouts/master.blade.php
+touch resources/views/auth/login.blade.php
+touch resources/views/auth/register.blade.php
+touch resources/views/dashboard.blade.php
+touch resources/views/books/list.blade.php
+touch resources/views/books/form.blade.php
+touch resources/views/users/list.blade.php
+touch resources/views/users/edit.blade.php
+touch resources/views/users/create-librarian.blade.php
+touch resources/views/profile/index.blade.php
+touch resources/views/profile/edit.blade.php
+touch resources/views/borrowings/all.blade.php
+touch resources/views/roles-permissions/list.blade.php
+touch resources/views/roles-permissions/edit-role.blade.php
+
+
+composer command:
+composer require spatie/laravel-permission
+composer create-project laravel/Laravel
+
+
+migration:
+php artisan migrate
